@@ -310,7 +310,7 @@ if __name__ == "__main__":
 
     wybor = ("wybierz co chcesz zrobić:\n 1 Hirvonen \n Neu")
         
-        
+ print("proba")
         
 
     
