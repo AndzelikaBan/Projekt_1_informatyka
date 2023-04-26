@@ -58,4 +58,4 @@ if __name__ == "__main__":
         dane = obiekt.przetworzenie(args.p,trans[args.trans])
     finally:
         print("Plik wynikowy zapisany.")
-    
+    print("proba")
