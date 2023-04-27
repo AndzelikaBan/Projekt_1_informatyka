@@ -15,4 +15,4 @@ WYMAGANIA:
   * obsługuje system Windows 10 i Windows 11
 
 JAK KORZYSTAĆ?
-W celu poprawnego korzystania z programu konieczne będzie utowrzenie pliku ze współrzędnymi (*.txt)
+W celu poprawnego korzystania z programu konieczne będzie utowrzenie pliku ze współrzędnymi (.txt)
