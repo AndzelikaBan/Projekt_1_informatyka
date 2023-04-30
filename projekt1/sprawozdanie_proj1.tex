@@ -1,0 +1,116 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\setlength{\parindent}{0pt}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.0cm, right=2.0cm]{geometry}
+\usepackage{hyperref}
+\usepackage{bibtopic}
+
+\usepackage{geometry}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+%\usepackage{fontspec}
+%\setmainfont{Times New Roman}
+
+\begin{document}
+	
+	\newpage
+	\begin{titlepage}
+		\newgeometry{top = 0.5in,right = 0.5in, left=0.5in, bottom=1in}
+		
+		\begin{center}
+			Politechnika Warszawska \\
+			Wydział Geodezji i Kartografii
+		\end{center}
+		
+		\hrule
+		\vspace*{1cm}
+		\begin{center}
+			\Large{\textbf{Informatyka Geodezyjna II}}
+		\end{center}
+		
+		
+		\vspace*{2cm}
+		\begin{center}
+			\large{\textbf{Projekt 1}} 
+		\end{center}
+		\vspace{3cm}
+		\hrule
+		
+		\begin{center}
+			\Large{\textbf{Transformacje.}}
+		\end{center}
+		\hrule
+		
+		\vspace*{2cm}
+		\begin{center}
+			\large{Alicja Dymowska \ \ \ \ 319311} \\
+			\large{Nikola Bobik \ \ \ \ 319295} \\
+			\large{Andżelika Bańkowska \ \ \ \ 319291}
+		\end{center}
+		
+		\vspace*{3cm}
+		
+		\begin{center}
+			\normalsize{\textbf{Grupa 1}}\\
+			\small{Zajęcia: \\poniedziałek 12:15-13:45} \\
+			\small{Rok akademicki:\\ 2022/23, Semestr 4}
+		\end{center}
+		
+		\vspace*{3cm}
+		\hrule
+		\begin{center}
+			\large{\textbf{Prowądzacy:} \ mgr. inż. Andrzej Szeszko}
+		\end{center}
+		\hrule
+		
+	\end{titlepage}
+
+\newpage
+\section{Cel projektu:}
+Głównym celem projektu jest stworzenie porgramu, który pozwoli na swobodne przeliczanie współrzędnych na różnych elipsoidach 
+\textbf{(GRS80, WGS84, elipsoida Krasowskiego)}. Mamy do wyboru 5 opcji:
+	\begin{itemize}
+		\item XYZ (geocentryczne) -> BLH (elipsoidalne)
+		\item BLH (elipoidalne) -> XYZ (geocentryczne)
+		\item XYZ (geocentryczne) -> NEU (topocentryczne)
+		\item BL -> PL-1992
+		\item BL -> PL-2000
+	\end{itemize}
+
+\section{Specyfikacja:}
+Program został napisany w języku python (wersja: 3.9), korzystając z bibliotek \textbf{numpy, math, argparse}. Program jest kompatybilny z oprogramowaniem Windows 10 oraz Windows 11. W celu uzyskania instrukcji obsługi programu zapraszamy do zapoznania się z treścią pliku "README.m", który znajduje się na stronie: 
+\href{https://github.com/AndzelikaBan/Projekt_1_INF}{GitHub.com}.
+
+\section{Przebieg:}
+Do stworzenia programy wykorzystałyśmy funkcje, które definiowałyśmy na przedmiocie Geodezja Wyższa I. Zostały one użyte jako metody pod klasą \textit{Transformacje}. Aby usprawnić przeliczanie między różnymi modelami elipsoid użyłyśmy metodę \textit{init}, dodatkowo zmienne zależne od danych elipsoid zapisalyśmy z użyciem \textit{self}. Z programu można korzystać przy użyciu wiersza poleceń co umożliwiła nam biblioteka \textit{argparse}.  \\
+\\
+Do poprawnego działania programu będzie niezbędne zainstalowanie bibliotek numpy, math oraz argparse przez użytkownika. Zdecydowałyśmy się na taką opcję, ponieważ biblioteki pozwalają nam na precyzyjniejsze wyniki oraz na schludniejszą formę kodu. 
+
+\section{Utrudnienia:}
+Pisząc kod w pythonie miałyśmy problem z wywoływaniem funkcji. Udało nam się zlokalizować źródło problemu, czyli usunęłyśmy z kodu wszystkie polskie znaki. 
+
+\section{Podsumowanie:}
+Projekt pozowlił nam na rozwinięcie naszych umiejętności w zakresie programowania w języku python oraz nauczył nowych (napewno w przyłości) przydatnych rzeczy takich jak: \\
+\begin{itemize}
+	\item Pisanie dokumentów w LaTeX;
+	\item Znajomość programowania obiektowego;
+	\item Pisanie dokumentacji funkcji - niezbędne dla użytkowników zewnętrznych;
+	\item Znajomość portalu GitHub - pozwala na wspólne pisanie kodów, tworząc wspólne repozytoria;
+	\item Tworzenie narzędzi w interfejsie tekstowym (cli) potrafiących przyjmować argumenty przy wywołaniu;
+	\item Implementowanie algorytmów pochodzących ze źródeł zewnętrznych.
+	\end{itemize}
+
+\section{Bibliografia:}
+ - \url{http://www.geonet.net.pl/images/2002_12_uklady_wspolrz.pdf}; \\
+ - \url{https://notatek.pl/transformacja-wspolrzednych-geocentrycznych-odbiornika-do-wspolrzednych-topocentrycznych}; \\
+ - materiały z przedmiotu Geodezja Wyższa I. \\
+ \\
+\begin{center}
+ 	\Large{Link do repozytorium: \url{{https://github.com/AndzelikaBan/Projekt_1_INF}}} 
+\end{center}
+\end{document}
